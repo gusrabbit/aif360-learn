@@ -17,8 +17,18 @@
 AI Fairness 360 Learn (aif360-learn v0.1)
 =========================================
 
-The AI Fairness 360 toolkit is an open-source library to help detect and remove
-bias in machine learning models. The AI Fairness 360 Python package includes a
+The AI Fairness 360 Learn started as a fork of IBM/AIF360 toolkit which is an
+open-source library to help detect and remove bias in machine learning models.
+This project focuses on making _aif360_ compatible with _scikit-learn_, and
+hence called _aif360-learn_.
+
+This project started as a fork of [IBM/AIF360](https://github.com/IBM/AIF360),
+and slowly it will move further away from it. As a result, most of the content
+is what you see on the original repository, for a while.
+
+Get in touch with us on [Gitter](https://gitter.im/aif360-learn/community)!
+
+The AI Fairness 360 Python package includes a
 comprehensive set of metrics for datasets and models to test for biases,
 explanations for these metrics, and algorithms to mitigate bias in datasets and
 models.
@@ -37,10 +47,6 @@ consulted.
 We have developed the package with extensibility in mind. This library is still
 in development. We encourage the contribution of your metrics, explainers, and
 debiasing algorithms.
-
-Get in touch with us on [Slack](https://aif360.slack.com) (invitation
-[here](https://join.slack.com/t/aif360/shared_invite/enQtNDI5Nzg2NTk0MTMyLTU4N2UwODVmMTYxZWMwZmEzZmZkODdjMTk5NWUwZDNhNDhlMzNkZDNhOTYwZDNlODc1MTdjYzY5OTU2OWQ1ZmY))!
-
 
 Supported bias mitigation algorithms
 ------------------------------------

@@ -1,6 +1,18 @@
 # AI Fairness 360 Learn (aif360-learn v0.1)
 
-[![Build Status](https://travis-ci.org/aif360-learn/aif360-learn.svg?branch=master)](https://travis-ci.org/aif360-learn/aif360-learn/)
+|Travis|_ |Codecov|_ |CircleCI|_ |Python35|_
+
+.. |Travis| image:: https://api.travis-ci.org/aif360-learn/aif360-learn.svg?branch=master
+.. _Travis: https://travis-ci.org/aif360-learn/aif360-learn
+
+.. |Codecov| image:: https://codecov.io/github/aif360-learn/aif360-learn/badge.svg?branch=master&service=github
+.. _Codecov: https://codecov.io/github/aif360-learn/aif360-learn?branch=master
+
+.. |CircleCI| image:: https://circleci.com/gh/aif360-learn/aif360-learn/tree/master.svg?style=shield&circle-token=:circle-token
+.. _CircleCI: https://circleci.com/gh/aif360-learn/aif360-learn
+
+.. |Python35| image:: https://img.shields.io/badge/python-3.5-blue.svg
+.. _Python35: https://badge.fury.io/py/aif360-learn
 
 The AI Fairness 360 toolkit is an open-source library to help detect and remove
 bias in machine learning models. The AI Fairness 360 Python package includes a

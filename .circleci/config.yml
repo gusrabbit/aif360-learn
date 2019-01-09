@@ -1,0 +1,21 @@
+version: 2
+
+jobs:
+  lint:
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+      - run: ./build_tools/circle/checkout_merge_commit.sh
+      - run:
+          name: dependencies
+          command: sudo pip install flake8
+      - run:
+          name: flake8
+          command: ./build_tools/circle/flake8_diff.sh
+
+workflows:
+  version: 2
+  lint-check:
+    jobs:
+      - lint

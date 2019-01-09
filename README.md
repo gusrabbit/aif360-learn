@@ -1,4 +1,4 @@
-# AI Fairness 360 Learn (aif360-learn v0.1)
+.. -*- mode: rst -*-
 
 |Travis|_ |Codecov|_ |CircleCI|_ |Python35|_
 
@@ -13,6 +13,8 @@
 
 .. |Python35| image:: https://img.shields.io/badge/python-3.5-blue.svg
 .. _Python35: https://badge.fury.io/py/aif360-learn
+
+# AI Fairness 360 Learn (aif360-learn v0.1)
 
 The AI Fairness 360 toolkit is an open-source library to help detect and remove
 bias in machine learning models. The AI Fairness 360 Python package includes a

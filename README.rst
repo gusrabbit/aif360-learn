@@ -14,7 +14,8 @@
 .. |Python35| image:: https://img.shields.io/badge/python-3.5-blue.svg
 .. _Python35: https://badge.fury.io/py/aif360-learn
 
-# AI Fairness 360 Learn (aif360-learn v0.1)
+AI Fairness 360 Learn (aif360-learn v0.1)
+=========================================
 
 The AI Fairness 360 toolkit is an open-source library to help detect and remove
 bias in machine learning models. The AI Fairness 360 Python package includes a
@@ -41,7 +42,8 @@ Get in touch with us on [Slack](https://aif360.slack.com) (invitation
 [here](https://join.slack.com/t/aif360/shared_invite/enQtNDI5Nzg2NTk0MTMyLTU4N2UwODVmMTYxZWMwZmEzZmZkODdjMTk5NWUwZDNhNDhlMzNkZDNhOTYwZDNlODc1MTdjYzY5OTU2OWQ1ZmY))!
 
 
-## Supported bias mitigation algorithms
+Supported bias mitigation algorithms
+------------------------------------
 
 * Optimized Preprocessing ([Calmon et al., 2017](http://papers.nips.cc/paper/6988-optimized-pre-processing-for-discrimination-prevention))
 * Disparate Impact Remover ([Feldman et al., 2015](https://doi.org/10.1145/2783258.2783311))
@@ -54,35 +56,34 @@ Get in touch with us on [Slack](https://aif360.slack.com) (invitation
 * Adversarial Debiasing ([Zhang et al., 2018](http://www.aies-conference.com/wp-content/papers/main/AIES_2018_paper_162.pdf))
 * Meta-Algorithm for Fair Classification ([Celis et al.. 2018](https://arxiv.org/abs/1806.06055))
 
-## Supported fairness metrics
+Supported fairness metrics
+--------------------------
 
 * Comprehensive set of group fairness metrics derived from selection rates and error rates
 * Comprehensive set of sample distortion metrics
 * Generalized Entropy Index ([Speicher et al., 2018](https://doi.org/10.1145/3219819.3220046))
 
 
-## Setup
+Setup
+-----
 
-Supported Configurations:
-
-| OS      | Python version |
-| ------- | -------------- |
-| macOS   | 2.7, 3.5, 3.6  |
-| Ubuntu  | 2.7, 3.5, 3.6  |
-| Windows | 3.5            |
+Requirements:
+- Python 3.5+
 
 Installation is easiest on a Unix-like system running Python 3. See the
 [Troubleshooting](#troubleshooting) section if you have issues with other
 configurations.
 
-### (Optional) Create a virtual environment
+(Optional) Create a virtual environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 AIF360 requires specific versions of many Python packages which may conflict
 with other projects on your system. A virtual environment manager is strongly
 recommended to ensure dependencies may be installed safely. If you have trouble
 installing AIF360, try this first.
 
-#### Conda
+Conda
+"""""
 
 Conda is recommended for all configurations though Virtualenv is generally
 interchangeable for our purposes ([CVXPY](#cvxpy) may require conda in some
@@ -109,7 +110,8 @@ The prompt will return to `$ `.
 Note: Older versions of conda may use `source activate aif360` and `source
 deactivate` (`activate aif360` and `deactivate` on Windows).
 
-### Install with minimal dependencies
+Install with minimal dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To install the latest stable version from PyPI, run:
 
@@ -159,12 +161,14 @@ appropriate sub-folder** in
 `$ANACONDA_PATH` is the base path to your conda installation (e.g.
 `~/anaconda`).
 
-### Troubleshooting
+Troubleshooting
+^^^^^^^^^^^^^^^
 
 If you encounter any errors during the installation process, look for your
 issue here and try the solutions.
 
-#### TensorFlow
+TensorFlow
+""""""""""
 
 In some cases, the URL is required for installation:
 
@@ -185,7 +189,8 @@ TensorFlow 1.1.0 only supports Python 3.5 officially on Windows).
 TensorFlow is only required for use with the
 `aif360.algorithms.inprocessing.AdversarialDebiasing` class.
 
-#### CVXPY
+CVXPY
+"""""
 
 On Windows, you may need to download the appropriate [Visual Studio C++
 compiler for Python](https://wiki.python.org/moin/WindowsCompilers). Then,
@@ -202,7 +207,8 @@ for an alternate installation procedure using conda.
 CVXPY is only required for use with the
 `aif360.algorithms.preprocessing.OptimPreproc` class.
 
-#### BlackBoxAuditing
+BlackBoxAuditing
+""""""""""""""""
 
 Some additional installation is required to use
 `aif360.algorithms.preprocessing.DisparateImpactRemover` with Python 2.7. In a
@@ -222,7 +228,8 @@ pip install --no-deps .
 
 This will produce a minimal installation which satisfies our requirements.
 
-## Using AIF360
+Using AIF360
+------------
 
 The `examples` directory contains a diverse collection of jupyter notebooks
 that use AI Fairness 360 in various ways. Both tutorials and demos illustrate
@@ -230,7 +237,8 @@ working code using AIF360. Tutorials provide additional discussion that walks
 the user through the various steps of the notebook. See the details about
 [tutorials and demos here](examples/README.md)
 
-## Citing AIF360
+Citing AIF360
+-------------
 
 A technical description of AI Fairness 360 is available in this
 [paper](https://arxiv.org/abs/1810.01943). Below is the bibtex entry for this
@@ -251,7 +259,8 @@ paper.
 }
 ```
 
-## AIF360 Videos
+AIF360 Videos
+-------------
 
 * Introductory [video](https://www.youtube.com/watch?v=X1NsrcaRQTE) to AI
   Fairness 360 by Kush Varshney, September 20, 2018 (32 mins)

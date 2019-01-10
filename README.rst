@@ -14,15 +14,13 @@
 .. |Python35| image:: https://img.shields.io/badge/python-3.5-blue.svg
 .. _Python35: https://badge.fury.io/py/aif360-learn
 
-# aif360-learn
-
 
 AI Fairness 360 Learn (aif360-learn v0.1)
 =========================================
 
 The AI Fairness 360 Learn started as a fork of IBM/AIF360 toolkit which is an
 open-source library to help detect and remove bias in machine learning models.
-This project focuses on making _aif360_ compatible with *scikit-learn*, and
+This project focuses on making *aif360* compatible with *scikit-learn*, and
 hence called *aif360-learn*.
 
 This project started as a fork of `IBM/AIF360

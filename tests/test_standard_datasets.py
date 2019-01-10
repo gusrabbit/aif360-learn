@@ -10,11 +10,11 @@ pd.set_option('display.max_rows', 50)
 pd.set_option('display.max_columns', 10)
 pd.set_option('display.width', 200)
 
-from aif360.datasets import AdultDataset
-from aif360.datasets import BankDataset
-from aif360.datasets import CompasDataset
-from aif360.datasets import GermanDataset
-from aif360.metrics import BinaryLabelDatasetMetric
+from aiflearn.datasets import AdultDataset
+from aiflearn.datasets import BankDataset
+from aiflearn.datasets import CompasDataset
+from aiflearn.datasets import GermanDataset
+from aiflearn.metrics import BinaryLabelDatasetMetric
 
 
 def test_compas():

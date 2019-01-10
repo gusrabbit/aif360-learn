@@ -6,10 +6,10 @@ from __future__ import unicode_literals
 import numpy as np
 import pandas as pd
 
-from aif360.datasets import AdultDataset
-from aif360.metrics import ClassificationMetric
-from aif360.algorithms.inprocessing import MetaFairClassifier
-from aif360.algorithms.inprocessing.celisMeta.utils import getStats
+from aiflearn.datasets import AdultDataset
+from aiflearn.metrics import ClassificationMetric
+from aiflearn.algorithms.inprocessing import MetaFairClassifier
+from aiflearn.algorithms.inprocessing.celisMeta.utils import getStats
 
 def test_adult():
     np.random.seed(1)

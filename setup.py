@@ -1,23 +1,26 @@
 from setuptools import setup, find_packages
 
-long_description = """The AI Fairness 360 toolkit is an open-source library to help detect and remove bias in machine
-learning models. The AI Fairness 360 Python package includes a comprehensive set of metrics for datasets and models to
-test for biases, explanations for these metrics, and algorithms to mitigate bias in datasets and models.
+long_description = """The AI Fairness 360 toolkit is an open-source
+library to help detect and remove bias in machine learning models. The
+AI Fairness 360 Python package includes a comprehensive set of metrics
+for datasets and models to test for biases, explanations for these
+metrics, and algorithms to mitigate bias in datasets and models.
 
-We have developed the package with extensibility in mind. This library is still in development. We encourage the
-contribution of your datasets, metrics, explainers, and debiasing algorithms."""
+We have developed the package with extensibility in mind. This library
+is still in development. We encourage the contribution of your
+datasets, metrics, explainers, and debiasing algorithms."""
 
-setup(name='aif360',
+setup(name='aif360-learn',
       version='0.1.1',
-      description='IBM AI Fairness 360',
-      author='aif360 developers',
-      author_email='aif360@us.ibm.com',
-      url='https://github.com/IBM/AIF360',
+      description='AI Fairness 360 Learn',
+      author='aif360 [learn] developers',
+      author_email='adrin.jalali@gmail.com',
+      url='https://github.com/aif360-learn/aif360-learn',
       long_description=long_description,
       long_description_content_type='text/markdown',
       license='Apache License 2.0',
       packages=find_packages(),
-      # python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <3.7',
+      python_requires='>=3.5',
       install_requires=[
           'numpy',
           'scipy',
@@ -25,6 +28,6 @@ setup(name='aif360',
           'scikit-learn',
           'numba',
       ],
-      package_data={'aif360': ['data/*', 'data/*/*', 'data/*/*/*']},
+      package_data={'aiflearn': ['data/*', 'data/*/*', 'data/*/*/*']},
       include_package_data=True,
       zip_safe=False)

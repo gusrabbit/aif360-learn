@@ -9,8 +9,8 @@ import sys
 import numpy as np
 import pytest
 
-from aif360.algorithms.preprocessing import LFR
-from aif360.algorithms.preprocessing.optim_preproc_helpers.data_preproc_functions import load_preproc_data_adult
+from aiflearn.algorithms.preprocessing import LFR
+from aiflearn.algorithms.preprocessing.optim_preproc_helpers.data_preproc_functions import load_preproc_data_adult
 
 
 sys.path.append("../../../")

@@ -10,7 +10,7 @@ pd.set_option('display.max_rows', 10)
 pd.set_option('display.max_columns', 10)
 pd.set_option('display.width', 200)
 
-from aif360.datasets import StructuredDataset
+from aiflearn.datasets import StructuredDataset
 
 data = np.arange(12).reshape((4, 3))
 cols = ['one', 'two', 'three', 'label']

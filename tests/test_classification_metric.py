@@ -6,8 +6,8 @@ from __future__ import unicode_literals
 import numpy as np
 import pandas as pd
 
-from aif360.datasets import BinaryLabelDataset
-from aif360.metrics import ClassificationMetric
+from aiflearn.datasets import BinaryLabelDataset
+from aiflearn.metrics import ClassificationMetric
 
 
 def test_generalized_entropy_index():

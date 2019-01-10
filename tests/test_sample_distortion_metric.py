@@ -7,8 +7,8 @@ import numpy as np
 import pandas as pd
 from scipy.spatial.distance import cdist
 
-from aif360.datasets import StructuredDataset
-from aif360.metrics import SampleDistortionMetric
+from aiflearn.datasets import StructuredDataset
+from aiflearn.metrics import SampleDistortionMetric
 
 
 data = np.arange(12).reshape((3, 4)).T

@@ -1,1 +1,1 @@
-recursive-include aif360/data/ *
+recursive-include aiflearn/data/ *

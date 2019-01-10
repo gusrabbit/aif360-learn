@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 
 import numpy as np
 
-from aif360.algorithms.preprocessing.reweighing import Reweighing
-from aif360.datasets import AdultDataset
+from aiflearn.algorithms.preprocessing.reweighing import Reweighing
+from aiflearn.datasets import AdultDataset
 
 def test_instance_weights():
     ad = AdultDataset(instance_weights_name='fnlwgt', features_to_drop=[])

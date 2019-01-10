@@ -9,9 +9,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC as SVM
 from sklearn.preprocessing import MinMaxScaler
 
-from aif360.algorithms.preprocessing import DisparateImpactRemover
-from aif360.datasets import AdultDataset
-from aif360.metrics import ClassificationMetric
+from aiflearn.algorithms.preprocessing import DisparateImpactRemover
+from aiflearn.datasets import AdultDataset
+from aiflearn.metrics import ClassificationMetric
 
 
 def test_repair0():

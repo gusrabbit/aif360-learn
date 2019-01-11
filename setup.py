@@ -11,7 +11,7 @@ is still in development. We encourage the contribution of your
 datasets, metrics, explainers, and debiasing algorithms."""
 
 setup(name='aif360-learn',
-      version='0.1.dev',
+      version='0.1.dev1',
       description='AI Fairness 360 Learn',
       author='aif360 [learn] developers',
       author_email='adrin.jalali@gmail.com',

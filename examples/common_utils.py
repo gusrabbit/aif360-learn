@@ -1,6 +1,6 @@
 # Metrics function
 from collections import OrderedDict
-from aif360.metrics import ClassificationMetric
+from aiflearn.metrics import ClassificationMetric
 
 def compute_metrics(dataset_true, dataset_pred, 
                     unprivileged_groups, privileged_groups,

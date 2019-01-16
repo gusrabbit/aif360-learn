@@ -1,8 +1,3 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 import numpy as np
 
 from sklearn.linear_model import LogisticRegression
@@ -27,8 +22,9 @@ def test_repair0():
 def test_adult():
     protected = 'sex'
     ad = AdultDataset(protected_attribute_names=[protected],
-        privileged_classes=[['Male']], categorical_features=[],
-        features_to_keep=['age', 'education-num', 'capital-gain', 'capital-loss', 'hours-per-week'])
+                      privileged_classes=[['Male']], categorical_features=[],
+                      features_to_keep=['age', 'education-num', 'capital-gain',
+                                        'capital-loss', 'hours-per-week'])
 
     scaler = MinMaxScaler(copy=False)
     # ad.features = scaler.fit_transform(ad.features)
@@ -50,9 +46,10 @@ def test_adult():
     # assert train_repd == train_repd2
     test_repd = di.fit_transform(test)
 
-    assert np.all(train_repd.protected_attributes == train.protected_attributes)
+    assert np.all(train_repd.protected_attributes ==
+                  train.protected_attributes)
 
-    lmod = LogisticRegression(class_weight='balanced')
+    lmod = LogisticRegression(class_weight='balanced', solver='lbfgs')
     # lmod = SVM(class_weight='balanced')
     lmod.fit(X_tr, y_tr)
 
@@ -71,12 +68,15 @@ def test_adult():
     p = [{protected: 1}]
     u = [{protected: 0}]
 
-    cm = ClassificationMetric(test, test_pred, privileged_groups=p, unprivileged_groups=u)
+    cm = ClassificationMetric(test, test_pred, privileged_groups=p,
+                              unprivileged_groups=u)
     before = cm.disparate_impact()
     # print('Disparate impact: {:.4}'.format(before))
     # print('Acc overall: {:.4}'.format(cm.accuracy()))
 
-    repaired_cm = ClassificationMetric(test_repd, test_repd_pred, privileged_groups=p, unprivileged_groups=u)
+    repaired_cm = ClassificationMetric(test_repd, test_repd_pred,
+                                       privileged_groups=p,
+                                       unprivileged_groups=u)
     after = repaired_cm.disparate_impact()
     # print('Disparate impact: {:.4}'.format(after))
     # print('Acc overall: {:.4}'.format(repaired_cm.accuracy()))

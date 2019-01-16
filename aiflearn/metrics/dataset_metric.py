@@ -4,7 +4,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 # from copy import deepcopy
-from logging import warn
+from logging import warning
 
 import numpy as np
 
@@ -63,9 +63,9 @@ class DatasetMetric(Metric):
             raise ValueError("'privileged_groups' and 'unprivileged_groups'"
                              " must be disjoint.")
         if not np.all(np.logical_or(priv_mask, unpriv_mask)):
-            warn("There are some instances in the dataset which are not "
-                 "designated as either privileged or unprivileged. Are you sure"
-                 " this is right?")
+            warning("There are some instances in the dataset which are not "
+                    "designated as either privileged or unprivileged. Are you "
+                    "sure this is right?")
 
     def _to_condition(self, privileged):
         """Converts a boolean condition to a group-specifying format that can be

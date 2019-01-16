@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from logging import warn
+from logging import warning
 
 import numpy as np
 import pandas as pd
@@ -101,7 +101,7 @@ class StandardDataset(BinaryLabelDataset):
         dropped = df.dropna()
         count = df.shape[0] - dropped.shape[0]
         if count > 0:
-            warn("Missing Data: {} rows removed from {}.".format(count,
+            warning("Missing Data: {} rows removed from {}.".format(count,
                 type(self).__name__))
         df = dropped
 

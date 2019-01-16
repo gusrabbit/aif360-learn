@@ -1,15 +1,10 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 from collections import defaultdict
 from contextlib import contextmanager
 from copy import deepcopy
-from logging import warn
 
 import numpy as np
 import pandas as pd
+from logging import warning
 
 from aiflearn.datasets import Dataset
 
@@ -234,7 +229,8 @@ class StructuredDataset(Dataset):
 
         # =========================== VALUE CHECKING ===========================
         if np.any(np.logical_or(self.scores < 0., self.scores > 1.)):
-            warn("'scores' has no well-defined meaning out of range [0, 1].")
+            warning("'scores' has no well-defined meaning out of range "
+                    "[0, 1].")
 
         for i in range(len(self.privileged_protected_attributes)):
             priv = set(self.privileged_protected_attributes[i])
@@ -255,8 +251,9 @@ class StructuredDataset(Dataset):
                         self.protected_attribute_names[i]))
             # warn for unobserved values
             if not (priv | unpriv) <= set(self.protected_attributes[:, i]):
-                warn("{} listed but not observed for feature {}".format(
-                    list((priv | unpriv) - set(self.protected_attributes[:, i])),
+                warning("{} listed but not observed for feature {}".format(
+                    list((priv | unpriv)
+                         - set(self.protected_attributes[:, i])),
                     self.protected_attribute_names[i]))
 
     @contextmanager

@@ -15,8 +15,8 @@
 .. _Python35: https://badge.fury.io/py/aif360-learn
 
 
-AI Fairness 360 Learn (aif360-learn v0.1)
-=========================================
+AI Fairness 360 Learn
+=====================
 
 The AI Fairness 360 Learn started as a fork of IBM/AIF360 toolkit which is an
 open-source library to help detect and remove bias in machine learning models.
@@ -37,7 +37,7 @@ algorithms to mitigate bias in datasets and models.
 The `AI Fairness 360 interactive experience
 <http://aif360.mybluemix.net/data>`_ provides a gentle introduction to the
 concepts and capabilities. The `tutorials and other notebooks
-<https://github.com/aif360-learn/aif360-learn/tree/master/examples>`_ offer a
+<https://github.com/IBM/AIF360/tree/master/examples>`_ offer a
 deeper, data scientist-oriented introduction. The complete API is also
 available.
 
@@ -98,10 +98,10 @@ configurations.
 (Optional) Create a virtual environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-AIF360 requires specific versions of many Python packages which may conflict
-with other projects on your system. A virtual environment manager is strongly
-recommended to ensure dependencies may be installed safely. If you have trouble
-installing AIF360, try this first.
+This package requires specific versions of many Python packages which may
+conflict with other projects on your system. A virtual environment manager is
+strongly recommended to ensure dependencies may be installed safely. If you
+have trouble installing AIF360, try this first.
 
 Conda
 """""
@@ -114,52 +114,52 @@ Miniconda
 if you are curious) and can be installed from `here
 <https://conda.io/miniconda.html>`_ if you do not already have it.
 
-Then, to create a new Python 3.5 environment, run:
+Then, to create a new Python 3.5 environment, run::
 
 
-    conda create --name aif360 python=3.5
-    conda activate aif360
+    conda create --name aiflearn python=3.5
+    conda activate aiflearn
 
 
-The shell should now look like `(aif360) $`. To deactivate the environment, run:
+The shell should now look like `(aiflearn) $`. To deactivate the environment,
+run::
 
 
-    (aif360)$ conda deactivate
+    (aiflearn)$ conda deactivate
 
 
 The prompt will return to `$ `.
 
-Note: Older versions of conda may use `source activate aif360` and `source
-deactivate` (`activate aif360` and `deactivate` on Windows).
+Note: Older versions of conda may use `source activate aiflearn` and `source
+deactivate` (`activate aiflearn` and `deactivate` on Windows).
 
 Install with minimal dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To install the latest stable version from PyPI, run:
+To install the latest stable version from PyPI, run: ::
 
 
-    pip install aif360
+    pip install aif360-learn
 
 
-This package supports Python 2.7, 3.5, and 3.6. However, for Python 2, the
-`BlackBoxAuditing` package must be [installed manually](#blackboxauditing).
+This package supports Python 3.5+.
 
 Some algorithms require additional dependencies not included in the minimal
 installation. To use these, we recommend a full installation.
 
 ### Full installation
 
-Clone the latest version of this repository:
+Clone the latest version of this repository::
 
 
-    git clone https://github.com/IBM/AIF360
+    git clone https://github.com/aif360-learn/aif360-learn
 
 
 If you'd like to run the examples, download the datasets now and place them in
 their respective folders as described in
-[aif360/data/README.md](aif360/data/README.md).
+[aiflearn/data/README.md](aiflearn/data/README.md).
 
-Then, navigate to the root directory of the project and run:
+Then, navigate to the root directory of the project and run::
 
 
     pip install .
@@ -168,7 +168,7 @@ Then, navigate to the root directory of the project and run:
 Run the Examples
 """"""""""""""""
 
-To run the example notebooks, install the additional requirements as follows:
+To run the example notebooks, install the additional requirements as follows::
 
 
     pip install -r requirements.txt
@@ -178,10 +178,10 @@ Then, follow the [Getting Started](https://pytorch.org) instructions from
 PyTorch to download and install the latest version for your machine.
 
 Finally, if you did not already, download the datasets as described in
-[aif360/data/README.md](aif360/data/README.md) but place them **in the
+[aiflearn/data/README.md](aiflearn/data/README.md) but place them **in the
 appropriate sub-folder** in
-`$ANACONDA_PATH/envs/aif360/lib/python3.5/site-packages/aif360/data/raw` where
-`$ANACONDA_PATH` is the base path to your conda installation (e.g.
+`$ANACONDA_PATH/envs/aiflearn/lib/python3.5/site-packages/aif360/data/raw`
+where `$ANACONDA_PATH` is the base path to your conda installation (e.g.
 `~/anaconda`).
 
 Troubleshooting
@@ -193,7 +193,7 @@ issue here and try the solutions.
 TensorFlow
 """"""""""
 
-In some cases, the URL is required for installation:
+In some cases, the URL is required for installation::
 
 
     # WINDOWS
@@ -210,14 +210,14 @@ Substitute Python version numbers for your configuration as appropriate (Note:
 TensorFlow 1.1.0 only supports Python 3.5 officially on Windows).
 
 TensorFlow is only required for use with the
-`aif360.algorithms.inprocessing.AdversarialDebiasing` class.
+`aiflearn.algorithms.inprocessing.AdversarialDebiasing` class.
 
 CVXPY
 """""
 
 On Windows, you may need to download the appropriate [Visual Studio C++
 compiler for Python](https://wiki.python.org/moin/WindowsCompilers). Then,
-re-run:
+re-run::
 
 
     pip install -r requirements.txt
@@ -228,36 +228,16 @@ Instructions](https://www.cvxpy.org/install/index.html#windows)
 for an alternate installation procedure using conda.
 
 CVXPY is only required for use with the
-`aif360.algorithms.preprocessing.OptimPreproc` class.
-
-BlackBoxAuditing
-""""""""""""""""
-
-Some additional installation is required to use
-`aif360.algorithms.preprocessing.DisparateImpactRemover` with Python 2.7. In a
-directory of your choosing, run:
+`aiflearn.algorithms.preprocessing.OptimPreproc` class.
 
 
-    git clone https://github.com/algofairness/BlackBoxAuditing
-
-
-In the root directory of `BlackBoxAuditing`, run:
-
-
-    echo -n $PWD/BlackBoxAuditing/weka.jar > python2_source/BlackBoxAuditing/model_factories/weka.path
-    echo "include python2_source/BlackBoxAuditing/model_factories/weka.path" >> MANIFEST.in
-    pip install --no-deps .
-
-
-This will produce a minimal installation which satisfies our requirements.
-
-Using AIF360
-------------
+Using aiflearn
+--------------
 
 The `examples` directory contains a diverse collection of jupyter notebooks
-that use AI Fairness 360 in various ways. Both tutorials and demos illustrate
-working code using AIF360. Tutorials provide additional discussion that walks
-the user through the various steps of the notebook. See the details about
+that use this package in various ways. Both tutorials and demos illustrate
+working code using `aiflearn`. Tutorials provide additional discussion that
+walks the user through the various steps of the notebook. See the details about
 [tutorials and demos here](examples/README.md)
 
 Citing AIF360
@@ -265,7 +245,7 @@ Citing AIF360
 
 A technical description of AI Fairness 360 is available in this
 [paper](https://arxiv.org/abs/1810.01943). Below is the bibtex entry for this
-paper.
+paper.::
 
 
     @misc{aif360-oct-2018,

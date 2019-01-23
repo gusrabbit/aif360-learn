@@ -174,7 +174,7 @@ To run the example notebooks, install the additional requirements as follows::
     pip install -r requirements.txt
 
 
-Then, follow the `Getting Started<https://pytorch.org>`_ instructions from
+Then, follow the `Getting Started <https://pytorch.org>`_ instructions from
 PyTorch to download and install the latest version for your machine.
 
 Finally, if you did not already, download the datasets as described in

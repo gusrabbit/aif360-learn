@@ -157,7 +157,7 @@ Clone the latest version of this repository::
 
 If you'd like to run the examples, download the datasets now and place them in
 their respective folders as described in
-[aiflearn/data/README.md](aiflearn/data/README.md).
+`aiflearn/data/README.md <aiflearn/data/README.md>`_.
 
 Then, navigate to the root directory of the project and run::
 
@@ -215,16 +215,16 @@ TensorFlow is only required for use with the
 CVXPY
 """""
 
-On Windows, you may need to download the appropriate [Visual Studio C++
-compiler for Python](https://wiki.python.org/moin/WindowsCompilers). Then,
+On Windows, you may need to download the appropriate `Visual Studio C++
+compiler for Python <https://wiki.python.org/moin/WindowsCompilers>`_. Then,
 re-run::
 
 
     pip install -r requirements.txt
 
 
-See the [CVXPY Installation
-Instructions](https://www.cvxpy.org/install/index.html#windows)
+See the `CVXPY Installation
+Instructions <https://www.cvxpy.org/install/index.html#windows>`_
 for an alternate installation procedure using conda.
 
 CVXPY is only required for use with the
@@ -238,13 +238,13 @@ The `examples` directory contains a diverse collection of jupyter notebooks
 that use this package in various ways. Both tutorials and demos illustrate
 working code using `aiflearn`. Tutorials provide additional discussion that
 walks the user through the various steps of the notebook. See the details about
-`tutorials and demos here<examples/README.md>`
+`tutorials and demos here <examples/README.md>_`
 
 Citing AIF360
 -------------
 
 A technical description of AI Fairness 360 is available in this
-`paper<https://arxiv.org/abs/1810.01943>`. Below is the bibtex entry for this
+`paper <https://arxiv.org/abs/1810.01943>`_. Below is the bibtex entry for this
 paper.::
 
 

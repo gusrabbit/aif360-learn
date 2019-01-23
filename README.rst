@@ -92,7 +92,7 @@ Requirements:
 - Python 3.5+
 
 Installation is easiest on a Unix-like system running Python 3. See the
-`Troubleshooting_` section if you have issues with other
+`Troubleshooting`_ section if you have issues with other
 configurations.
 
 (Optional) Create a virtual environment
@@ -174,7 +174,7 @@ To run the example notebooks, install the additional requirements as follows::
     pip install -r requirements.txt
 
 
-Then, follow the `Getting Started<https://pytorch.org>` instructions from
+Then, follow the `Getting Started<https://pytorch.org>`_ instructions from
 PyTorch to download and install the latest version for your machine.
 
 Finally, if you did not already, download the datasets as described in

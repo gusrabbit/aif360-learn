@@ -107,7 +107,7 @@ Conda
 """""
 
 Conda is recommended for all configurations though Virtualenv is generally
-interchangeable for our purposes ([CVXPY](#cvxpy) may require conda in some
+interchangeable for our purposes `CVXPY`_ may require conda in some
 cases). Miniconda is sufficient (see `the difference between Anaconda and
 Miniconda
 <https://conda.io/docs/user-guide/install/download.html#anaconda-or-miniconda>`_
@@ -128,7 +128,7 @@ run::
     (aiflearn)$ conda deactivate
 
 
-The prompt will return to `$ `.
+The prompt will return to `$`.
 
 Note: Older versions of conda may use `source activate aiflearn` and `source
 deactivate` (`activate aiflearn` and `deactivate` on Windows).
@@ -178,7 +178,7 @@ Then, follow the `Getting Started <https://pytorch.org>`_ instructions from
 PyTorch to download and install the latest version for your machine.
 
 Finally, if you did not already, download the datasets as described in
-[aiflearn/data/README.md](aiflearn/data/README.md) but place them **in the
+`aiflearn/data/README.md <aiflearn/data/README.md>`_ but place them **in the
 appropriate sub-folder** in
 `$ANACONDA_PATH/envs/aiflearn/lib/python3.5/site-packages/aif360/data/raw`
 where `$ANACONDA_PATH` is the base path to your conda installation (e.g.

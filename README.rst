@@ -238,7 +238,7 @@ The `examples` directory contains a diverse collection of jupyter notebooks
 that use this package in various ways. Both tutorials and demos illustrate
 working code using `aiflearn`. Tutorials provide additional discussion that
 walks the user through the various steps of the notebook. See the details about
-`tutorials and demos here <examples/README.md>_`
+`tutorials and demos here <examples/README.md>`_.
 
 Citing AIF360
 -------------

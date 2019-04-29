@@ -3,13 +3,12 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-# from copy import deepcopy
-from logging import warning
+# from logging import warning
 
 import numpy as np
 
-from aiflearn.datasets import StructuredDataset
-from aiflearn.metrics import Metric, utils
+from aif360.datasets import StructuredDataset
+from aif360.metrics import Metric, utils
 
 
 class DatasetMetric(Metric):
@@ -28,12 +27,12 @@ class DatasetMetric(Metric):
 
         Raises:
             TypeError: `dataset` must be a
-                :obj:`~aiflearn.datasets.StructuredDataset` type.
+                :obj:`~aif360.datasets.StructuredDataset` type.
             ValueError: `privileged_groups` and `unprivileged_groups` must be
                 disjoint.
 
         Examples:
-            >>> from aiflearn.datasets import GermanDataset
+            >>> from aif360.datasets import GermanDataset
             >>> german = GermanDataset()
             >>> u = [{'sex': 1, 'age': 1}, {'sex': 0}]
             >>> p = [{'sex': 1, 'age': 0}]
@@ -62,10 +61,10 @@ class DatasetMetric(Metric):
         if np.any(np.logical_and(priv_mask, unpriv_mask)):
             raise ValueError("'privileged_groups' and 'unprivileged_groups'"
                              " must be disjoint.")
-        if not np.all(np.logical_or(priv_mask, unpriv_mask)):
-            warning("There are some instances in the dataset which are not "
-                    "designated as either privileged or unprivileged. Are you "
-                    "sure this is right?")
+        # if not np.all(np.logical_or(priv_mask, unpriv_mask)):
+        #     warning("There are some instances in the dataset which are not "
+        #             "designated as either privileged or unprivileged. Are you "
+        #             "sure this is right?")
 
     def _to_condition(self, privileged):
         """Converts a boolean condition to a group-specifying format that can be
